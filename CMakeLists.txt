@@ -6,10 +6,15 @@ project(print_ip VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 find_package(GTest REQUIRED)
 find_package(Threads REQUIRED)
 
-add_executable(print_ip print_ip.cpp)
+add_executable(print_ip print_ip.h print_ip.cpp)
 add_executable(print_ip_test print_ip_test.cpp)
 
 set_target_properties(print_ip PROPERTIES
+    CXX_STANDARD 14
+    CXX_STANDARD_REQUIRED ON 
+)
+
+set_target_properties(print_ip_test PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON 
 )
