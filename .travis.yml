@@ -3,6 +3,8 @@ before_script:
 - sudo apt-get install libboost-test-dev -y
 - sudo apt-get install libgtest-dev
 - sudo apt-get install cmake
+- sudo apt-get install doxygen
+- sudo apt-get install graphviz
 - cd /usr/src/gtest
 - sudo cmake .
 - sudo make
