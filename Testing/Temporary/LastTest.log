@@ -1,0 +1,40 @@
+Start testing: Nov 27 23:21 UTC
+----------------------------------------------------------
+1/1 Testing: print_ip_test
+1/1 Test: print_ip_test
+Command: "/home/travis/build/TiBxq/otus_cpp_h4/print_ip_test"
+Directory: /home/travis/build/TiBxq/otus_cpp_h4
+"print_ip_test" start time: Nov 27 23:21 UTC
+Output:
+----------------------------------------------------------
+[==========] Running 7 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 7 tests from print_ip
+[ RUN      ] print_ip.print_ip_test_char
+[       OK ] print_ip.print_ip_test_char (0 ms)
+[ RUN      ] print_ip.print_ip_test_short
+[       OK ] print_ip.print_ip_test_short (0 ms)
+[ RUN      ] print_ip.print_ip_test_int
+[       OK ] print_ip.print_ip_test_int (0 ms)
+[ RUN      ] print_ip.print_ip_test_long
+[       OK ] print_ip.print_ip_test_long (0 ms)
+[ RUN      ] print_ip.print_ip_test_string
+[       OK ] print_ip.print_ip_test_string (0 ms)
+[ RUN      ] print_ip.print_ip_test_vector
+[       OK ] print_ip.print_ip_test_vector (0 ms)
+[ RUN      ] print_ip.print_ip_test_list
+[       OK ] print_ip.print_ip_test_list (0 ms)
+[----------] 7 tests from print_ip (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 7 tests.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"print_ip_test" end time: Nov 27 23:21 UTC
+"print_ip_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 27 23:21 UTC

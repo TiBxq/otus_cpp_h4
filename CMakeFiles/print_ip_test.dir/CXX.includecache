@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/travis/build/TiBxq/otus_cpp_h4/print_ip.h
+iostream
+-
+string
+-
+vector
+-
+list
+-
+
+/home/travis/build/TiBxq/otus_cpp_h4/print_ip_test.cpp
+gtest/gtest.h
+-
+sstream
+-
+print_ip.h
+/home/travis/build/TiBxq/otus_cpp_h4/print_ip.h
+
