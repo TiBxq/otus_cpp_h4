@@ -39,7 +39,7 @@ void print_ip(std::string param, std::ostream& os)
 }
 
 template<template<typename, typename...> typename C, typename T, typename... Rest,
-         typename = std::enable_if<
+         typename = typename std::enable_if<
             is_vector<C<T, Rest...>>::value || is_list<C<T, Rest...>>::value,
          void>::type
          >
