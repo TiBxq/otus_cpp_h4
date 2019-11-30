@@ -39,6 +39,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -81,6 +82,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -110,6 +112,17 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <p><a href="print__ip_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__vector.html">is_vector&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__vector_3_01std_1_1vector_3_01_t_00_01_a_01_4_01_4.html">is_vector&lt; std::vector&lt; T, A &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__list.html">is_list&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structis__list_3_01std_1_1list_3_01_t_00_01_a_01_4_01_4.html">is_list&lt; std::list&lt; T, A &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3610f420073a0b75d0c002a55d706366"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -118,12 +131,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a24e735d0445025c188d4f9c941b6f8cd"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
 <tr class="memitem:a24e735d0445025c188d4f9c941b6f8cd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a24e735d0445025c188d4f9c941b6f8cd">print_ip</a> (std::string param, std::ostream &amp;os)</td></tr>
 <tr class="separator:a24e735d0445025c188d4f9c941b6f8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0166df75eb7e4104280cc0845d5f379d"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a0166df75eb7e4104280cc0845d5f379d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a0166df75eb7e4104280cc0845d5f379d">print_ip</a> (std::vector&lt; T &gt; param, std::ostream &amp;os)</td></tr>
-<tr class="separator:a0166df75eb7e4104280cc0845d5f379d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86024a4cbaa0cdfdaaa8a9fed1636480"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a86024a4cbaa0cdfdaaa8a9fed1636480"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a86024a4cbaa0cdfdaaa8a9fed1636480">print_ip</a> (std::list&lt; T &gt; param, std::ostream &amp;os)</td></tr>
-<tr class="separator:a86024a4cbaa0cdfdaaa8a9fed1636480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a884b59fb741f39ee7d1518392ba18eba"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, typename... &gt; class C, typename T , typename... Rest, typename  = typename std::enable_if&lt;            is_vector&lt;C&lt;T, Rest...&gt;&gt;::value || is_list&lt;C&lt;T, Rest...&gt;&gt;::value,         void&gt;::type&gt; </td></tr>
+<tr class="memitem:a884b59fb741f39ee7d1518392ba18eba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a884b59fb741f39ee7d1518392ba18eba">print_ip</a> (C&lt; T, Rest... &gt; param, std::ostream &amp;os)</td></tr>
+<tr class="separator:a884b59fb741f39ee7d1518392ba18eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -187,44 +197,16 @@ template&lt;&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a0166df75eb7e4104280cc0845d5f379d"></a>
+<a class="anchor" id="a884b59fb741f39ee7d1518392ba18eba"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T &gt; </div>
+template&lt;template&lt; typename, typename... &gt; class C, typename T , typename... Rest, typename  = typename std::enable_if&lt;            is_vector&lt;C&lt;T, Rest...&gt;&gt;::value || is_list&lt;C&lt;T, Rest...&gt;&gt;::value,         void&gt;::type&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">void print_ip </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>param</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::ostream &amp;&#160;</td>
-          <td class="paramname"><em>os</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a86024a4cbaa0cdfdaaa8a9fed1636480"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">void print_ip </td>
-          <td>(</td>
-          <td class="paramtype">std::list&lt; T &gt;&#160;</td>
+          <td class="paramtype">C&lt; T, Rest... &gt;&#160;</td>
           <td class="paramname"><em>param</em>, </td>
         </tr>
         <tr>
