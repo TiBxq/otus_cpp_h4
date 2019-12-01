@@ -135,6 +135,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aac5cac1154e3e758b0495e8223261dba"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, typename... &gt; class C, typename T , typename... Rest, typename  = typename std::enable_if&lt;            is_vector&lt;C&lt;T, Rest...&gt;&gt;::value || is_list&lt;C&lt;T, Rest...&gt;&gt;::value,         void&gt;::type&gt; </td></tr>
 <tr class="memitem:aac5cac1154e3e758b0495e8223261dba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#aac5cac1154e3e758b0495e8223261dba">print_ip</a> (const C&lt; T, Rest... &gt; &amp;param, std::ostream &amp;os)</td></tr>
 <tr class="separator:aac5cac1154e3e758b0495e8223261dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95c0759bb07aa4a4724f1d0636d92553"><td class="memTemplParams" colspan="2">template&lt;std::size_t I = 0, typename... Args&gt; </td></tr>
+<tr class="memitem:a95c0759bb07aa4a4724f1d0636d92553"><td class="memTemplItemLeft" align="right" valign="top">std::enable_if&lt; I==sizeof...(Args), void &gt;::type&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a95c0759bb07aa4a4724f1d0636d92553">print_ip</a> (const std::tuple&lt; Args... &gt; &amp;, std::ostream &amp;)</td></tr>
+<tr class="separator:a95c0759bb07aa4a4724f1d0636d92553"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -215,6 +218,34 @@ template&lt;template&lt; typename, typename... &gt; class C, typename T , typena
           <td></td>
           <td class="paramtype">std::ostream &amp;&#160;</td>
           <td class="paramname"><em>os</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a95c0759bb07aa4a4724f1d0636d92553"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;std::size_t I = 0, typename... Args&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::enable_if&lt;I == sizeof...(Args), void&gt;::type print_ip </td>
+          <td>(</td>
+          <td class="paramtype">const std::tuple&lt; Args... &gt; &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
         </tr>
         <tr>
           <td></td>
