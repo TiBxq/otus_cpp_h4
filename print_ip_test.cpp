@@ -52,6 +52,13 @@ TEST(print_ip, print_ip_test_list)
     ASSERT_EQ(oss.str(), "192.168.1.1\n");
 }
 
+TEST(print_ip, print_ip_test_tuple)
+{
+    std::ostringstream oss;
+    print_ip(std::make_tuple(1, 2, "3", '4'), oss);
+    ASSERT_EQ(oss.str(), "1.2.3.4\n");
+}
+
 int main(int argc, char *argv[])
 {
 	::testing::InitGoogleTest(&argc, argv);

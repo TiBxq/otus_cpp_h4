@@ -12,11 +12,13 @@ struct is_vector : public std::false_type {};
 template<typename T, typename A>
 struct is_vector<std::vector<T, A>> : public std::true_type {};
 
+
 template<typename T>
 struct is_list : public std::false_type {};
 
 template<typename T, typename A>
 struct is_list<std::list<T, A>> : public std::true_type {};
+
 
 template<typename T>
 void print_ip(const T& param, std::ostream& os)
@@ -70,5 +72,9 @@ print_ip(const std::tuple<Args...>& param, std::ostream& os)
         os << '.';
     }
     os << std::get<I>(param);
+    if (I == sizeof...(Args) - 1)
+    {
+        os << std::endl;
+    }
     print_ip<I + 1, Args...>(param, os);
 }
