@@ -93,6 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;list&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for print_ip.h:</div>
 <div class="dyncontent">
@@ -125,15 +126,15 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3610f420073a0b75d0c002a55d706366"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a3610f420073a0b75d0c002a55d706366"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a3610f420073a0b75d0c002a55d706366">print_ip</a> (T param, std::ostream &amp;os)</td></tr>
-<tr class="separator:a3610f420073a0b75d0c002a55d706366"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24e735d0445025c188d4f9c941b6f8cd"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
-<tr class="memitem:a24e735d0445025c188d4f9c941b6f8cd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a24e735d0445025c188d4f9c941b6f8cd">print_ip</a> (std::string param, std::ostream &amp;os)</td></tr>
-<tr class="separator:a24e735d0445025c188d4f9c941b6f8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a884b59fb741f39ee7d1518392ba18eba"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, typename... &gt; class C, typename T , typename... Rest, typename  = typename std::enable_if&lt;            is_vector&lt;C&lt;T, Rest...&gt;&gt;::value || is_list&lt;C&lt;T, Rest...&gt;&gt;::value,         void&gt;::type&gt; </td></tr>
-<tr class="memitem:a884b59fb741f39ee7d1518392ba18eba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a884b59fb741f39ee7d1518392ba18eba">print_ip</a> (C&lt; T, Rest... &gt; param, std::ostream &amp;os)</td></tr>
-<tr class="separator:a884b59fb741f39ee7d1518392ba18eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a953472218e9f8056dd99ec63e8dbbfc0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a953472218e9f8056dd99ec63e8dbbfc0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#a953472218e9f8056dd99ec63e8dbbfc0">print_ip</a> (const T &amp;param, std::ostream &amp;os)</td></tr>
+<tr class="separator:a953472218e9f8056dd99ec63e8dbbfc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcbec7526df4c887c68e139316b5c6af"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:adcbec7526df4c887c68e139316b5c6af"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#adcbec7526df4c887c68e139316b5c6af">print_ip</a> (const std::string &amp;param, std::ostream &amp;os)</td></tr>
+<tr class="separator:adcbec7526df4c887c68e139316b5c6af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac5cac1154e3e758b0495e8223261dba"><td class="memTemplParams" colspan="2">template&lt;template&lt; typename, typename... &gt; class C, typename T , typename... Rest, typename  = typename std::enable_if&lt;            is_vector&lt;C&lt;T, Rest...&gt;&gt;::value || is_list&lt;C&lt;T, Rest...&gt;&gt;::value,         void&gt;::type&gt; </td></tr>
+<tr class="memitem:aac5cac1154e3e758b0495e8223261dba"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="print__ip_8h.html#aac5cac1154e3e758b0495e8223261dba">print_ip</a> (const C&lt; T, Rest... &gt; &amp;param, std::ostream &amp;os)</td></tr>
+<tr class="separator:aac5cac1154e3e758b0495e8223261dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -141,7 +142,7 @@ Variables</h2></td></tr>
 <tr class="separator:a45e94606e7bad962ffc17961ee1293c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a3610f420073a0b75d0c002a55d706366"></a>
+<a class="anchor" id="a953472218e9f8056dd99ec63e8dbbfc0"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -150,7 +151,7 @@ template&lt;typename T &gt; </div>
         <tr>
           <td class="memname">void print_ip </td>
           <td>(</td>
-          <td class="paramtype">T&#160;</td>
+          <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>param</em>, </td>
         </tr>
         <tr>
@@ -169,7 +170,7 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a24e735d0445025c188d4f9c941b6f8cd"></a>
+<a class="anchor" id="adcbec7526df4c887c68e139316b5c6af"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -178,7 +179,7 @@ template&lt;&gt; </div>
         <tr>
           <td class="memname">void print_ip </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>param</em>, </td>
         </tr>
         <tr>
@@ -197,7 +198,7 @@ template&lt;&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a884b59fb741f39ee7d1518392ba18eba"></a>
+<a class="anchor" id="aac5cac1154e3e758b0495e8223261dba"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -206,7 +207,7 @@ template&lt;template&lt; typename, typename... &gt; class C, typename T , typena
         <tr>
           <td class="memname">void print_ip </td>
           <td>(</td>
-          <td class="paramtype">C&lt; T, Rest... &gt;&#160;</td>
+          <td class="paramtype">const C&lt; T, Rest... &gt; &amp;&#160;</td>
           <td class="paramname"><em>param</em>, </td>
         </tr>
         <tr>
