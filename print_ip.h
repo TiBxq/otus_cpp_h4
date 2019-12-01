@@ -57,18 +57,18 @@ void print_ip(const C<T, Rest...>& param, std::ostream& os)
     os << std::endl;
 }
 
-//template<std::size_t I = 0, typename ...Args>
-//typename std::enable_if<I == sizeof...(Args), void>::type
-//print_ip(const std::tuple<Args...>&, std::ostream&) {}
-//
-//template<std::size_t I = 0, typename ...Args>
-//typename std::enable_if<I < sizeof...(Args), void>::type
-//print_ip(const std::tuple<Args...>& param, std::ostream& os)
-//{
-//    if (I != 0)
-//    {
-//        os << '.';
-//    }
-//    os << std::get<I>(param);
-//    print_ip<I + 1, Args...>(param, os);
-//}
+template<std::size_t I = 0, typename ...Args>
+typename std::enable_if<I == sizeof...(Args), void>::type
+print_ip(const std::tuple<Args...>&, std::ostream&) {}
+
+template<std::size_t I = 0, typename ...Args>
+typename std::enable_if<I < sizeof...(Args), void>::type
+print_ip(const std::tuple<Args...>& param, std::ostream& os)
+{
+    if (I != 0)
+    {
+        os << '.';
+    }
+    os << std::get<I>(param);
+    print_ip<I + 1, Args...>(param, os);
+}
