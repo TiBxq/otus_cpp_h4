@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <list>
+#include <tuple>
 
 const int c_byteSize = 8;
 
@@ -54,4 +55,20 @@ void print_ip(C<T, Rest...> param, std::ostream& os)
         os << *it;
     }
     os << std::endl;
+}
+
+template<std::size_t I = 0, typename ...Args>
+typename std::enable_if<I == sizeof...(Args), void>::type
+print_tuple(std::tuple<Args...>&, std::ostream&) {}
+
+template<std::size_t I = 0, typename ...Args>
+typename std::enable_if<I < sizeof...(Args), void>::type
+print_tuple(std::tuple<Args...>& param, std::ostream& os)
+{
+    if (I != 0)
+    {
+        os << '.';
+    }
+    os << std::get<I>(param);
+    print_tuple<I + 1, Args...>(param, os);
 }
