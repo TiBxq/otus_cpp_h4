@@ -19,7 +19,7 @@ template<typename T, typename A>
 struct is_list<std::list<T, A>> : public std::true_type {};
 
 template<typename T>
-void print_ip(T param, std::ostream& os)
+void print_ip(const T& param, std::ostream& os)
 {
     for (int i = sizeof(T) - 1; i >= 0; --i)
     {
@@ -34,7 +34,7 @@ void print_ip(T param, std::ostream& os)
 }
 
 template<>
-void print_ip(std::string param, std::ostream& os)
+void print_ip(const std::string& param, std::ostream& os)
 {
     os << param << std::endl;
 }
@@ -44,7 +44,7 @@ template<template<typename, typename...> class C, typename T, typename... Rest,
             is_vector<C<T, Rest...>>::value || is_list<C<T, Rest...>>::value,
          void>::type
          >
-void print_ip(C<T, Rest...> param, std::ostream& os)
+void print_ip(const C<T, Rest...>& param, std::ostream& os)
 {
     for (auto it = param.begin(); it != param.end(); ++it)
     {
@@ -57,18 +57,18 @@ void print_ip(C<T, Rest...> param, std::ostream& os)
     os << std::endl;
 }
 
-template<std::size_t I = 0, typename ...Args>
-typename std::enable_if<I == sizeof...(Args), void>::type
-print_tuple(std::tuple<Args...>&, std::ostream&) {}
-
-template<std::size_t I = 0, typename ...Args>
-typename std::enable_if<I < sizeof...(Args), void>::type
-print_tuple(std::tuple<Args...>& param, std::ostream& os)
-{
-    if (I != 0)
-    {
-        os << '.';
-    }
-    os << std::get<I>(param);
-    print_tuple<I + 1, Args...>(param, os);
-}
+//template<std::size_t I = 0, typename ...Args>
+//typename std::enable_if<I == sizeof...(Args), void>::type
+//print_ip(const std::tuple<Args...>&, std::ostream&) {}
+//
+//template<std::size_t I = 0, typename ...Args>
+//typename std::enable_if<I < sizeof...(Args), void>::type
+//print_ip(const std::tuple<Args...>& param, std::ostream& os)
+//{
+//    if (I != 0)
+//    {
+//        os << '.';
+//    }
+//    os << std::get<I>(param);
+//    print_ip<I + 1, Args...>(param, os);
+//}
