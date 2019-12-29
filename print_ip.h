@@ -59,14 +59,19 @@ void print_ip(const C<T, Rest...>& param, std::ostream& os)
     os << std::endl;
 }
 
-template<std::size_t I = 0, typename ...Args>
+template<std::size_t I = 0, std::size_t J = 0, typename ...Args>
 typename std::enable_if<I == sizeof...(Args), void>::type
 print_ip(const std::tuple<Args...>&, std::ostream&) {}
 
-template<std::size_t I = 0, typename ...Args>
+template<std::size_t I = 0, std::size_t J = 0, typename ...Args>
 typename std::enable_if<I < sizeof...(Args), void>::type
 print_ip(const std::tuple<Args...>& param, std::ostream& os)
 {
+    static_assert(std::is_same<
+        typename std::tuple_element<I, std::tuple<Args...>>::type, 
+        typename std::tuple_element<J, std::tuple<Args...>>::type
+    >::value, "elements of tuple should have the same type");
+
     if (I != 0)
     {
         os << '.';
@@ -76,5 +81,5 @@ print_ip(const std::tuple<Args...>& param, std::ostream& os)
     {
         os << std::endl;
     }
-    print_ip<I + 1, Args...>(param, os);
+    print_ip<I + 1, I, Args...>(param, os);
 }

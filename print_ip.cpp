@@ -9,6 +9,7 @@ int main(/*int argc, char const *argv[]*/)
     print_ip(std::string("8.8.8.8"), std::cout);
     print_ip(std::vector<int>{ 192, 168, 0, 1 }, std::cout);
     print_ip(std::list<int>{ 192, 168, 1, 1 }, std::cout);
-    print_ip(std::make_tuple(1, 2, "3", '4'), std::cout);
+    //print_ip(std::make_tuple(1, 2, "3", '4'), std::cout);
+    print_ip(std::make_tuple(1, 2, 3, 4), std::cout);
     return 0;
 }
